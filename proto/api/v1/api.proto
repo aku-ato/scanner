@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package com.facehunter.scanner.api.v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+// These annotations are used when generating the OpenAPI file.
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    version: "1.0";
+  };
+  external_docs: {
+    description: "API Documentation";
+  }
+  schemes: HTTP;
+};
+
+
+// The Settings service definition.
+service ScannerService {
+  rpc Start (StartRequest) returns (StartResponse){
+    option (google.api.http) = {
+      get: "/api/v1/phone_resolve/start"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Control the filesystem scanner service in order to configure start the scan";
+      description: "Control the filesystem scanner service";
+      tags: "Scanner API service";
+    };
+  }
+}
+
+message StartRequest {
+}
+
+message StartResponse {
+  string message = 1;
+}

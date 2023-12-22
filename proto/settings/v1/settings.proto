@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package com.facehunter.scanner.settings.v1;
+
+import "google/protobuf/timestamp.proto";
+
+// The Settings service definition.
+service SettingsService {
+  rpc CreateSettings (CreateSettingsRequest) returns (CreateSettingsResponse);
+  rpc ReadSettings (ReadSettingsRequest) returns (ReadSettingsResponse);
+  rpc UpdateSettings (UpdateSettingsRequest) returns (UpdateSettingsResponse);
+  rpc DeleteSettings (DeleteSettingsRequest) returns (DeleteSettingsResponse);
+  rpc ListSettings (ListSettingsRequest) returns (ListSettingsResponse);
+}
+
+message Settings {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Timestamp created_at = 20;
+  google.protobuf.Timestamp updated_at = 21;
+  google.protobuf.Timestamp deleted_at = 22;
+}
+
+
+message CreateSettingsRequest {
+  Settings settings = 1;
+}
+
+message CreateSettingsResponse {
+  Settings settings = 1;
+}
+
+message ReadSettingsRequest {
+  string id = 1;
+}
+
+message ReadSettingsResponse {
+  Settings settings = 1;
+}
+
+message UpdateSettingsRequest {
+  Settings settings = 1;
+}
+
+message UpdateSettingsResponse {
+  Settings settings = 1;
+}
+
+message DeleteSettingsRequest {
+  string id = 1;
+}
+
+message DeleteSettingsResponse {
+}
+
+message ListSettingsRequest {
+}
+
+message ListSettingsResponse {
+  repeated Settings settings = 1;
+}
+

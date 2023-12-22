@@ -1,0 +1,26 @@
+# Fase di build
+FROM golang:1.21.3-bullseye AS build
+
+# Imposta la directory di lavoro
+WORKDIR /app
+
+# Installa git
+RUN apt-get install -y git curl gcc libc-dev
+
+# Installa Delve
+RUN GO111MODULE=on go install github.com/go-delve/delve/cmd/dlv@latest
+
+# Installa air per l'hot reload
+RUN GO111MODULE=on go install github.com/cosmtrek/air@latest
+
+# Copia go mod e sum files
+COPY go.mod ./
+
+# Scarica tutte le dipendenze
+RUN go mod download
+
+# Copia la sorgente nel container Docker
+COPY . .
+
+# Esegui air per l'hot reload quando il container viene avviato
+CMD ["air"]
