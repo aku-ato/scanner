@@ -1,8 +1,8 @@
 package mortar
 
 import (
-	"com.facehunter/scanner/app/customhandlers"
-	"com.facehunter/scanner/app/customhandlers/openapi"
+	"github.com/aku-ato/scanner/app/customhandlers"
+	"github.com/aku-ato/scanner/app/customhandlers/openapi"
 	"go.uber.org/fx"
 )
 

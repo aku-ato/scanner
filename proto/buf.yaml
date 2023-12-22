@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/com.facehunter/scanner
+name: buf.build/github.com/aku-ato/scanner
 deps:
   - buf.build/googleapis/googleapis
   - buf.build/grpc-ecosystem/grpc-gateway

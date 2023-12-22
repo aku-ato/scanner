@@ -3,7 +3,7 @@ package controllers
 import (
 	"context"
 
-	api "com.facehunter/scanner/pkg/proto/api/v1"
+	api "github.com/aku-ato/scanner/pkg/proto/api/v1"
 
 	"github.com/go-masonry/mortar/interfaces/log"
 	"go.uber.org/fx"

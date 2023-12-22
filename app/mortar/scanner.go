@@ -1,11 +1,12 @@
 package mortar
 
 import (
-	"com.facehunter/scanner/app/controllers"
-	"com.facehunter/scanner/app/services"
-	"com.facehunter/scanner/app/validations"
-	api "com.facehunter/scanner/pkg/proto/api/v1"
 	"context"
+
+	"github.com/aku-ato/scanner/app/controllers"
+	"github.com/aku-ato/scanner/app/services"
+	"github.com/aku-ato/scanner/app/validations"
+	api "github.com/aku-ato/scanner/pkg/proto/api/v1"
 	serverInt "github.com/go-masonry/mortar/interfaces/http/server"
 	"github.com/go-masonry/mortar/providers/groups"
 	"google.golang.org/grpc/credentials/insecure"

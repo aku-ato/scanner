@@ -1,7 +1,7 @@
 package main
 
 import (
-	"com.facehunter/scanner/app/mortar"
+	"github.com/aku-ato/scanner/app/mortar"
 	"github.com/alecthomas/kong"
 
 	"github.com/go-masonry/mortar/providers"

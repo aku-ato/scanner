@@ -1,15 +1,16 @@
 package openapi
 
 import (
-	"com.facehunter/scanner/app/conf"
-	"com.facehunter/scanner/third_party"
+	"io/fs"
+	"mime"
+	"net/http"
+
+	"github.com/aku-ato/scanner/app/conf"
+	"github.com/aku-ato/scanner/third_party"
 	"github.com/go-masonry/mortar/interfaces/cfg"
 	"github.com/go-masonry/mortar/interfaces/log"
 	"github.com/go-masonry/mortar/providers/types"
 	"go.uber.org/fx"
-	"io/fs"
-	"mime"
-	"net/http"
 )
 
 type DocumentationHandler struct {

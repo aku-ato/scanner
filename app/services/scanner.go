@@ -1,13 +1,14 @@
 package services
 
 import (
-	"com.facehunter/scanner/app/controllers"
-	"com.facehunter/scanner/app/validations"
 	"context"
+
+	"github.com/aku-ato/scanner/app/controllers"
+	"github.com/aku-ato/scanner/app/validations"
 
 	"github.com/go-masonry/mortar/interfaces/monitor"
 
-	api "com.facehunter/scanner/pkg/proto/api/v1"
+	api "github.com/aku-ato/scanner/pkg/proto/api/v1"
 
 	"github.com/go-masonry/mortar/interfaces/log"
 	"go.uber.org/fx"

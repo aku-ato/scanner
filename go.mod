@@ -1,4 +1,4 @@
-module com.facehunter/scanner
+module github.com/aku-ato/scanner
 
 go 1.21.3
 

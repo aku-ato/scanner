@@ -1,7 +1,7 @@
 package customhandlers
 
 import (
-	"com.facehunter/scanner/app/customhandlers/openapi"
+	"github.com/aku-ato/scanner/app/customhandlers/openapi"
 	"github.com/go-masonry/mortar/providers/groups"
 	"go.uber.org/fx"
 )
